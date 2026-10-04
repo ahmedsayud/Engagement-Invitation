@@ -204,8 +204,18 @@ export default function InvitationApp() {
     return () => clearInterval(timer);
   }, [targetDate]);
 
-  // Observer for reveal animations on general sections
   useEffect(() => {
+    const showAllReveals = () => {
+      document.querySelectorAll(".reveal").forEach((el) => {
+        el.classList.add("is-visible");
+      });
+    };
+
+    if (isGateRemoved) {
+      showAllReveals();
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    }
+
     const reveals = document.querySelectorAll(".reveal");
     const observer = new IntersectionObserver(
       (entries) => {
@@ -215,7 +225,7 @@ export default function InvitationApp() {
           }
         });
       },
-      { threshold: 0.1 }
+      { threshold: 0.05 }
     );
     reveals.forEach((r) => observer.observe(r));
     return () => observer.disconnect();
@@ -225,16 +235,21 @@ export default function InvitationApp() {
     if (isOpen) return;
     setIsOpen(true);
 
-    confetti({
-      particleCount: 60,
-      spread: 70,
-      origin: { y: 0.6 },
-      colors: ["#f1dfa6", "#cba35c", "#e28d9f", "#ffffff"],
-    });
+    try {
+      confetti({
+        particleCount: 80,
+        spread: 80,
+        origin: { y: 0.6 },
+        colors: ["#f1dfa6", "#cba35c", "#e28d9f", "#ffffff"],
+      });
+    } catch {
+      // ignore if confetti fails
+    }
 
+    // After animation finishes, remove gate
     setTimeout(() => {
       setIsGateRemoved(true);
-    }, 2100);
+    }, 1800);
   };
 
   const whatsappLink = `https://wa.me/?text=${encodeURIComponent(
@@ -254,7 +269,11 @@ export default function InvitationApp() {
     <div className="relative min-h-screen">
       {/* 3D Gate Screen */}
       {!isGateRemoved && (
-        <div className={`gate ${isOpen ? "is-opening" : ""}`}>
+        <div
+          className={`gate ${isOpen ? "is-opening" : ""}`}
+          onClick={handleOpenEnvelope}
+          style={{ cursor: "pointer" }}
+        >
           <div className="gate-sparks" aria-hidden="true">
             {sparks.map(([x, y, d], i) => (
               <i key={i} style={{ left: `${x}%`, top: `${y}%`, animationDelay: `${d * 0.4}s` }} />
