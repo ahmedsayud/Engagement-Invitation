@@ -3,6 +3,7 @@
 import React, { useMemo, useState, useEffect, useRef } from "react";
 import Image from "next/image";
 import confetti from "canvas-confetti";
+import GallerySection from "./GallerySection";
 
 // Sparkle positions for the gate screen
 const sparks = [
@@ -422,27 +423,7 @@ export default function InvitationApp() {
         </section>
 
         {/* 5. Photos Gallery */}
-        <section id="gallery" className="scene" aria-label="لحظات مميزة">
-          <div className="scene-container">
-            <div className="gallery-head">
-              <p className="kicker">اللقطات</p>
-              <h2 className="gallery-title">لحظات لا تُنسى</h2>
-              <Ornament className="signpost-ornament" />
-            </div>
-            <div className="gallery-stack">
-              <figure className="gallery-item reveal">
-                <div className="gallery-par">
-                  <Image src="/images/photo1.jpg" alt="خاتم الخطوبة وباقة الورد" fill className="ph-img" priority />
-                </div>
-              </figure>
-              <figure className="gallery-item reveal">
-                <div className="gallery-par">
-                  <Image src="/images/photo2.jpg" alt="أجواء الاحتفال الفاخرة" fill className="ph-img" />
-                </div>
-              </figure>
-            </div>
-          </div>
-        </section>
+        <GallerySection />
 
         {/* 6. Arrival & Location */}
         <section id="arrival" className="scene scene-arrival" aria-label="الوصول للمكان">

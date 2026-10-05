@@ -7,7 +7,7 @@ export default function RSVPSection() {
   const whatsappMessage = encodeURIComponent(
     "ألف مبروك لأحمد & آلاء بمناسبة الخطوبة المباركة! 💍🤍 يسعدني ويشرفني الحضور ومشاركتكم الفرحة إن شاء الله ✨"
   );
-  const whatsappUrl = `https://wa.me/?text=${whatsappMessage}`;
+  const whatsappUrl = `https://wa.me/201011541853?text=${whatsappMessage}`;
 
   const triggerConfetti = () => {
     // Multi-stage fireworks explosion

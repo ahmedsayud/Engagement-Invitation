@@ -1,5 +1,4 @@
 import type { Metadata, Viewport } from "next";
-import "./globals.css";
 
 export const viewport: Viewport = {
   width: "device-width",
@@ -10,10 +9,10 @@ export const viewport: Viewport = {
 export const metadata: Metadata = {
   metadataBase: new URL("https://ahmed-alaa-engagement.vercel.app"),
   title: "أحمد & آلاء | دعوة خطوبة 💍✨",
-  description: "يسعدنا ويشرفنا حضوركم لمشاركتنا فرحة حفل خطوبتنا المبارك، بحضوركم تكتمل فرحتنا 🤍",
+  description: "بحضوركم تكتمل فرحتنا 🤍",
   openGraph: {
     title: "أحمد & آلاء | دعوة خطوبة 💍✨",
-    description: "يسعدنا ويشرفنا حضوركم لمشاركتنا فرحة حفل خطوبتنا المبارك، بحضوركم تكتمل فرحتنا 🤍",
+    description: "بحضوركم تكتمل فرحتنا 🤍",
     url: "https://ahmed-alaa-engagement.vercel.app",
     siteName: "دعوة خطوبة أحمد & آلاء",
     locale: "ar_EG",
@@ -30,7 +29,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "أحمد & آلاء | دعوة خطوبة 💍✨",
-    description: "يسعدنا ويشرفنا حضوركم لمشاركتنا فرحة حفل خطوبتنا المبارك، بحضوركم تكتمل فرحتنا 🤍",
+    description: "بحضوركم تكتمل فرحتنا 🤍",
     images: ["/images/photo1.jpg"],
   },
 };
@@ -49,6 +48,7 @@ export default function RootLayout({
           href="https://fonts.googleapis.com/css2?family=Aref+Ruqaa:wght@400;700&family=El+Messiri:wght@400;500;600;700&family=Tajawal:wght@400;500;700;800&display=swap"
           rel="stylesheet"
         />
+        <link rel="stylesheet" href="/assets/index-YZphGmre.css" />
       </head>
       <body>{children}</body>
     </html>
