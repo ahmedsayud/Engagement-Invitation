@@ -21,8 +21,8 @@ js = js.split('دوسة زرار واحدة وتبقى معانا 🤍').join('�
 
 // 4. Venue & Location
 js = js.split('قاعة التراث').join('أمام البيت');
-js = js.split('طلخا، المنصورة').join('أمام البيت');
-js = js.split('طلخا — الدقهلية').join('أمام البيت');
+js = js.split('طلخا، المنصورة').join('السجاعية');
+js = js.split('طلخا — الدقهلية').join('عند محطة المياه الكبيرة بالسجاعية - أرض السمسار');
 js = js.split('الوصول لقاعة التراث').join('الوصول لمكان الحفل');
 js = js.split('🤍 وصلت… أهلاً بيك في التراث').join('🤍 نورتونا… تكتمل سعادتنا بوجودكم الغالي');
 js = js.split('البوابة اتفتحت… والقاعة كلها قدامك').join('أهلاً بكم في ليلة العمر التي تزدان بحضوركم ومحبتكم 🤍');
@@ -649,40 +649,150 @@ const additionalCss = `
   font-family: var(--font-body, "Tajawal", sans-serif) !important;
 }
 
-@media (max-width: 640px) {
-  .lightbox-stage {
-    gap: 0.35rem !important;
-  }
-  .lightbox-nav-btn {
-    width: 38px !important;
-    height: 38px !important;
-  }
-  .lightbox-nav-btn svg {
-    width: 20px !important;
-    height: 20px !important;
-  }
-  .lightbox-frame {
-    max-height: 60vh !important;
-    max-width: 86vw !important;
-  }
-  .lightbox-full-img {
-    max-height: 60vh !important;
-    max-width: 86vw !important;
-  }
-  .lightbox-caption {
-    font-size: 0.95rem !important;
-  }
+}
+
+/* ==========================================================================
+   HIGH CONTRAST & RADIANT LUXURY TEXT ENHANCEMENTS
+   ========================================================================== */
+
+/* Map Note & Address Text */
+.map-note {
+  color: #fff8eb !important;
+  font-family: var(--font-heading, "El Messiri", serif) !important;
+  font-size: 1.12rem !important;
+  font-weight: 700 !important;
+  background: rgba(28, 8, 22, 0.9) !important;
+  border: 1.5px solid rgba(230, 195, 105, 0.8) !important;
+  padding: 0.65rem 1.6rem !important;
+  border-radius: 999px !important;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.85), 0 0 20px rgba(212, 175, 55, 0.35) !important;
+  margin-top: 0.9rem !important;
+  display: inline-block !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+  letter-spacing: 0.2px !important;
+}
+
+/* Arrival Section */
+.scene-arrival .arrival-content {
+  background: linear-gradient(180deg, rgba(38, 12, 28, 0.92), rgba(20, 5, 16, 0.96)) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.65) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 25px 60px rgba(0, 0, 0, 0.9), 0 0 35px rgba(212, 175, 55, 0.25) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  padding: 2.2rem 1.6rem !important;
+}
+
+.arrival-title {
+  color: #fce79f !important;
+  text-shadow: 0 0 28px rgba(245, 218, 138, 0.65), 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+  font-size: clamp(1.8rem, 6.5vw, 2.5rem) !important;
+  font-weight: 700 !important;
+}
+
+.arrival-sub {
+  color: #fff4db !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  line-height: 1.9 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.95) !important;
+}
+
+/* Closing Section */
+.scene-closing .closing-content {
+  background: linear-gradient(180deg, rgba(38, 12, 28, 0.94), rgba(18, 4, 14, 0.98)) !important;
+  border: 1.5px solid rgba(212, 175, 55, 0.7) !important;
+  border-radius: 24px !important;
+  box-shadow: 0 25px 70px rgba(0, 0, 0, 0.92), 0 0 40px rgba(212, 175, 55, 0.3) !important;
+  backdrop-filter: blur(16px) !important;
+  -webkit-backdrop-filter: blur(16px) !important;
+  padding: 2.4rem 1.8rem !important;
+}
+
+.closing-dua {
+  color: #fde8a0 !important;
+  text-shadow: 0 0 30px rgba(253, 232, 160, 0.7), 0 2px 8px rgba(0, 0, 0, 0.9) !important;
+  font-size: clamp(1.75rem, 6.5vw, 2.4rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.8 !important;
+}
+
+.closing-thanks {
+  color: #ffffff !important;
+  font-size: 1.25rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.95) !important;
+  margin: 0.5rem 0 !important;
+}
+
+.closing-footer {
+  color: #f7e6be !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  background: rgba(212, 175, 55, 0.22) !important;
+  border: 1px solid rgba(212, 175, 55, 0.55) !important;
+  padding: 0.5rem 1.4rem !important;
+  border-radius: 999px !important;
+  display: inline-block !important;
+  margin-top: 1.6rem !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.95) !important;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6) !important;
+}
+
+/* RSVP Text */
+.rsvp-text {
+  color: #fff6e4 !important;
+  font-size: 1.2rem !important;
+  font-weight: 600 !important;
+  line-height: 2 !important;
+  text-shadow: 0 2px 10px rgba(0, 0, 0, 0.9) !important;
+}
+
+/* General Signpost Body text readability */
+.signpost-body {
+  color: #fff6e4 !important;
+  font-size: 1.1rem !important;
+  font-weight: 500 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+}
+
+.count-caption {
+  color: #faebd0 !important;
+  font-size: 1.05rem !important;
+  font-weight: 600 !important;
+  text-shadow: 0 2px 8px rgba(0, 0, 0, 0.85) !important;
+}
+
+.date-main {
+  color: #ffffff !important;
+  font-weight: 700 !important;
+  text-shadow: 0 2px 10px rgba(0,0,0,0.9) !important;
+}
+
+.date-hijri {
+  color: #fde8a0 !important;
+  font-weight: 600 !important;
+  font-size: 1.08rem !important;
+  text-shadow: 0 2px 8px rgba(0,0,0,0.85) !important;
+}
+
+.kicker {
+  color: #ffdf85 !important;
+  font-weight: 700 !important;
+  text-shadow: 0 0 15px rgba(255, 223, 133, 0.45) !important;
 }
 `;
 
 fs.writeFileSync('public/assets/index-YZphGmre.css', css + additionalCss);
+fs.writeFileSync('public/bundle.css', css + additionalCss);
 
 // 10. Update MapScene
 let mapJs = fs.readFileSync('public/assets/MapScene-Oi2yY4XI.js', 'utf8');
 mapJs = mapJs.split('مكان الفرح على الخريطة').join('مكان الخطوبة على الخريطة');
 mapJs = mapJs.split('قاعة التراث').join('أمام البيت');
-mapJs = mapJs.split('طلخا، المنصورة').join('أمام البيت');
-mapJs = mapJs.split('طلخا — الدقهلية').join('أمام البيت');
+mapJs = mapJs.split('طلخا، المنصورة').join('السجاعية');
+mapJs = mapJs.split('طلخا — الدقهلية').join('عند محطة المياه الكبيرة بالسجاعية - أرض السمسار');
+mapJs = mapJs.split('افتح القاعة في Google Maps').join('افتح الموقع في Google Maps');
 fs.writeFileSync('public/assets/MapScene-Oi2yY4XI.js', mapJs);
 
 // 11. Sync venue directory & og-cover

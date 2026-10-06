@@ -79,7 +79,7 @@ export default function DetailsCard() {
     .toISOString()
     .replace(/-|:|\.\d+/g, "")}&details=${encodeURIComponent(
     "حفل خطوبة أحمد & آلاء المبارك، بحضوركم تكتمل فرحتنا 🤍"
-  )}&location=${encodeURIComponent("أمام البيت")}`;
+  )}&location=${encodeURIComponent("عند محطة المياه الكبيرة بالسجاعية - أرض السمسار")}`;
 
   return (
     <section className="scene" id="details">
@@ -147,7 +147,7 @@ export default function DetailsCard() {
               }}
             >
               <MapPin size={18} className="text-amber-300" />
-              <span>الموقع: أمام البيت</span>
+              <span>الموقع: عند محطة المياه الكبيرة بالسجاعية - أرض السمسار</span>
             </div>
           </div>
 

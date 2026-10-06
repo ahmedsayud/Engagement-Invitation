@@ -34,7 +34,7 @@ export default function LocationSection() {
             }}
           >
             <MapPin size={24} className="text-amber-300" />
-            <span>أمام البيت</span>
+            <span>عند محطة المياه الكبيرة بالسجاعية - أرض السمسار</span>
           </div>
 
           {/* Map Frame Card */}
